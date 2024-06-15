@@ -35,7 +35,6 @@ function updateWords(array) {
 }
 
 async function sendRequest(input) {
-    const responseElement = document.getElementById('response');
     const response = await fetch('http://192.168.43.133:5000/prefs', {
         method: 'POST',
         headers: {
