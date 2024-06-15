@@ -1,4 +1,4 @@
-let IP = "http://192.168.43.133:5000"
+let IP = "http://192.168.93.133:5000"
 
 let prefsCont = document.querySelector(".preferencesContainer");
 let preferences = document.getElementById('preferences');
