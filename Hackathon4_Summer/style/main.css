@@ -28,8 +28,8 @@
 }
 
 .headerContainer {
-    width: 30%;
-    align-items: right;
+    width: 60%;
+    /* align-items: right; */
     /* text-align: center; */
     margin-left: auto;
     display: flex;
@@ -41,10 +41,11 @@
     /* border: 2px solid rgb(133, 16, 236); */
     /* background-color: rgb(133, 14, 238); */
     /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), 4px 4px 10px rgba(0, 0, 0, 0.1); */
-    width: 150px;
+    /* width: 150px; */
     border-radius: 10px;
     transition: 200ms ease;
-    margin-left: auto;
+    padding: 5px;
+    font-weight: 200;
     margin-right: 10px;
 }
 
@@ -52,4 +53,8 @@
     /* background-color: rgb(255, 255, 255); */
     color: rgb(72, 72, 126);
     /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.2); */
+}
+
+.headerItem:first-child {
+    margin-left: auto;
 }
