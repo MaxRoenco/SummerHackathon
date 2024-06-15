@@ -16,9 +16,12 @@
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    margin-top: 5%;
 }
 
-.searchTwoFactor {}
+.searchTwoFactor {
+    margin-top: 15%;
+}
 
 .preferencesContainer {
     display: flex;
