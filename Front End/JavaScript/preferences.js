@@ -8,8 +8,8 @@ factorButton.addEventListener('click', () => {
     preferenceWord = inputTwoFactor.value;
     console.log(preferenceWord);
     inputTwoFactor.value = '';
-    // sendRequest(preferenceWord);
-    updateWords([]);
+    sendRequest(preferenceWord);
+    // updateWords([]);
 })
 
 function updateWords(array) {
@@ -26,7 +26,7 @@ function updateWords(array) {
 async function sendRequest(input) {
     const responseElement = document.getElementById('response');
 
-    const response = await fetch('http://192.168.43.133:5000/process', {
+    const response = await fetch('http://192.168.93.133:5000/process', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
