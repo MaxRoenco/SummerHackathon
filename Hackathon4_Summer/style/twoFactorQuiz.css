@@ -1,6 +1,7 @@
 .twoFactorQuizz {
     height: 100vh;
-    background: url('./assets/img/TwoFactorQuizzBack.png') no-repeat center center fixed;
+    background-image: url('../assets/img/TwoFactorQuizzBack.png');
+    background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     flex-direction: column;
