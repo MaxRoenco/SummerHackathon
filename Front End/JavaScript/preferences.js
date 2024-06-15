@@ -25,7 +25,7 @@ function updateWords(array) {
 async function sendRequest(input) {
     const responseElement = document.getElementById('response');
 
-    const response = await fetch('http://127.0.0.1:5000/process', {
+    const response = await fetch('http://192.168.43.133:5000/process', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
