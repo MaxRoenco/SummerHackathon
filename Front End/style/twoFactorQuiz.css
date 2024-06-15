@@ -115,3 +115,10 @@
     background: green;
     color: white;
 }
+
+.preferenceButton {
+    background: #f0f0f0;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+}
