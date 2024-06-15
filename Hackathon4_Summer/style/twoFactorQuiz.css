@@ -1,12 +1,13 @@
 .twoFactorQuizz {
-    height: 100vh;
+    height: calc(100vh - 60px);
     background-image: url('../assets/img/TwoFactorQuizzBack.png');
-    background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
+    z-index: -1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    overflow: hidden;
 }
 
 .searchTwoFactor,
@@ -17,16 +18,35 @@
     margin-bottom: 20px;
 }
 
+.searchTwoFactor {}
+
 .preferencesContainer {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
+    color: #5d4c76;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 600;
+}
+
+.preferencesContainer p {}
+
+.preferences {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
 }
 
 .preference {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: #f0f0f0;
-    width: 50px;
+    width: 100px;
     height: 50px;
     margin: 5px;
     border-radius: 5px;
+    text-align: center;
+    color: #5d4c76;
 }
