@@ -40,6 +40,11 @@
     /* justify-content: space-evenly; */
 }
 
+.headerContainer>a {
+    text-decoration: none;
+    color: white;
+}
+
 .headerItem {
     cursor: pointer;
     /* border: 2px solid rgb(133, 16, 236); */
@@ -84,19 +89,19 @@
     padding: 20px;
 
     hr {
-        width: 100%; 
+        width: 100%;
     }
 
 }
 
-.subsection h1{
+.subsection h1 {
     font-size: 25px;
 }
 
-.subsection h3{
+.subsection h3 {
     font-size: 12px;
 }
 
-.subsection a{
+.subsection a {
     color: #000;
 }
