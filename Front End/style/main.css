@@ -28,7 +28,14 @@
     text-align: center;
     left: 0;
     margin-left: 5%;
+    cursor: pointer;
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
 }
+
 
 .headerContainer {
     width: 60%;
