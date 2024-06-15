@@ -79,6 +79,10 @@ async function getArticles(input) {
     } else {
         console.log(`Error: ${data.error}`)
     }
+
+    for key, value in data['result'].items():
+        print(key, value)
+
 }
 
 function addCard(title, url) {
