@@ -15,7 +15,7 @@ factorButton.addEventListener('click', () => {
 
 function updateWords(array) {
     preferences.replaceChildren();
-    // array = JSON.parse(array);
+    array = JSON.parse(array);
     array.forEach(value => {
         let div = document.createElement('div');
         div.classList.add('preference');
