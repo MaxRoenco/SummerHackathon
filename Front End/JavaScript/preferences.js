@@ -14,6 +14,7 @@ factorButton.addEventListener('click', () => {
 })
 
 function updateWords(array) {
+    choices = new Set();
     preferences.replaceChildren();
     array = JSON.parse(array);
     array.forEach(value => {
