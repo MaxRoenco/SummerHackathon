@@ -1,6 +1,7 @@
 let IP = "http://192.168.43.133:5000"
 let input = document.querySelector("#inputlink");
 let btn = document.querySelector(".linkButton");
+let out = document.querySelector("#output");
 
 btn.addEventListener("click", _ => {
     console.log("sup");
@@ -18,6 +19,7 @@ async function getComp(url) {
     const data = await response.json();
     if (response.ok) {
         console.log(data)
+        out.textContent = data["result"];
     } else {
         console.log(`Error: ${data.error}`)
     }
