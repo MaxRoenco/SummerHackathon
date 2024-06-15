@@ -97,14 +97,3 @@ function addCard(title, url) {
     ele.href = url;
     document.querySelector(".cardsContainer").append(ele);
 }
-
-addCard("omg", "https://www.google.com/");
-addCard("lol", "https://www.google.com/");
-addCard("omg", "https://www.google.com/");
-addCard("lol", "https://www.google.com/");
-addCard("omg", "https://www.google.com/");
-addCard("lol", "https://www.google.com/");
-addCard("omg", "https://www.google.com/");
-addCard("lol", "https://www.google.com/");
-addCard("omg", "https://www.google.com/");
-addCard("lol", "https://www.google.com/");
