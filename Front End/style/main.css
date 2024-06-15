@@ -123,6 +123,11 @@ body {
 
 }
 
+.section {
+    display: flex;
+    justify-content: center;
+}
+
 .subsection h1 {
     font-size: 25px;
 }
@@ -132,5 +137,9 @@ body {
 }
 
 .subsection a {
-    color: #000;
+    text-decoration: underline;
+}
+
+.subsection a:hover {
+    color: rgb(0, 0, 0);
 }
