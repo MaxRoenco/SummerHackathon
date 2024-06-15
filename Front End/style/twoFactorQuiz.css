@@ -29,7 +29,7 @@
         color: rgb(255, 255, 255);
     }
 
-    
+
 }
 
 
@@ -68,7 +68,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    box-shadow: 2px 2px 5px rgb(7, 26, 88), 4px 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 2px 2px 5px rgb(7, 26, 88), 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .factorButton {
@@ -79,7 +79,7 @@
     border-radius: 15px;
     font-weight: 600;
     cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), 4px 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .factorButton:active {
@@ -87,7 +87,7 @@
 }
 
 .factorButton:hover {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .preferences {
@@ -108,9 +108,9 @@
     border-radius: 5px;
     text-align: center;
     color: #5d4c76;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), 4px 4px 10px rgba(0, 0, 0, 0.1); 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), 4px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .preference:hover {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3); 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
