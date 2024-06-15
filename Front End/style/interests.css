@@ -124,6 +124,7 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 24px;
+    margin-bottom: 300px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -221,3 +222,29 @@
     margin: 0;
     color: #666;
 }
+
+.anim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 100px;
+    font-family: 'Trebuchet MS', sans-serif;
+    overflow: hidden;
+    text-align: center;
+    width: 17em;
+    white-space: nowrap;
+    animation: type 2s steps(300, end); 
+}
+
+
+@keyframes type{ 
+from { width: 0px; } 
+} 
