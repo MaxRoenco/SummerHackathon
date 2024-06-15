@@ -7,7 +7,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: hidden;
     color: #36137b;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
@@ -66,6 +65,7 @@
     justify-content: center;
     flex-direction: column;
     box-shadow: 2px 2px 5px rgb(7, 26, 88), 4px 4px 10px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
 }
 
 .factorButton {
@@ -115,4 +115,44 @@
 .active {
     background: green;
     color: white;
+}
+
+.preferenceButton {
+    background: rgb(255, 255, 255);
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 1px 2px 10px 1px;
+    visibility: hidden;
+}
+
+.preferenceButton:active {
+    transform: scale(0.95);
+}
+
+.cardsContainer {
+    width: 100%;
+    background: #36137b4e;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    text-decoration: none;
+    color: white;
+    width: 70%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #5d2dbd5a;
+    border: 1px solid #fff;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: auto;
 }
