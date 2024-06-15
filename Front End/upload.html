@@ -1,11 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Uploader JavaScript | CodingNepal</title>
+  <link rel="stylesheet" href="style/uploda.css">
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="./style/main.css">
 </head>
+
 <body>
-    
+
+  <div class="index">
+    <div class="header">
+      <div class="logo">
+        <a href="./index.html">
+          Logo
+        </a>
+      </div>
+      <div class="headerContainer">
+        <a href="./interests.html">
+          <div class="headerItem" id="interests">Interests</div>
+        </a>
+        <a href="./twoFactorQuiz.html">
+          <div class="headerItem" id="search">Two factor quizz</div>
+        </a>
+        <a href="./link.html">
+          <div class="headerItem" id="linkSearch">Search using link</div>
+        </a>
+        <a href="./upload.html">
+          <div class="headerItem" id="linkSearch">Search by image</div>
+        </a>
+      </div>
+    </div>
+
+    <div class="file-uploader">
+      <div class="uploader-header">
+        <h2 class="uploader-title">File Uploader Made by hardworker Artiom Ilico</h2>
+        <h4 class="file-completed-status"></h4>
+      </div>
+      <ul class="file-list"></ul>
+      <div class="file-upload-box">
+        <h2 class="box-title">
+          <span class="file-instruction">Drag files here or</span>
+          <span class="file-browse-button">browse</span>
+        </h2>
+        <input class="file-browse-input" type="file" multiple hidden>
+      </div>
+    </div>
+
+    <div class="footer">
+      <hr>
+      <div class="section">
+        <div class="subsection">
+          <h1>Contact Us</h1>
+          <h3>Street: Traian Boulevard</h3>
+          <h3>City: Chisinau</h3>
+          <h3>Zip Code:21201</h3>
+          <h3>Phone number: 0(22)345678</h3>
+        </div>
+        <div class="subsection">
+          <h1>Menu</h1>
+          <h3><a href="#">Home</a></h3>
+          <h3><a href="#">Shopping bag</a></h3>
+          <h3><a href="#">About</a></h3>
+        </div>
+        <div class="subsection text-right">
+          <h1>Were are we located ?</h1>
+          <iframe width="250" height="150" id="gmap_canvas"
+            src="https://maps.google.com/maps?q=chisinau,%20traian%2010&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="JavaScript/upload.js"></script>
 </body>
+
 </html>

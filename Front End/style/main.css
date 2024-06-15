@@ -4,8 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100%;
+}
+
 .mainpage {
-    height: (100vh - 60px);
+    height: 100%;
     background-image: url('../assets/img/TwoFactorQuizzBack.png');
     background-size: cover;
     background-position: center;
@@ -102,6 +106,7 @@
 }
 
 .footer {
+    margin-top: 60px;
     background-color: rgba(227, 238, 247, 0.71);
     flex-shrink: 0;
     height: 10%;
