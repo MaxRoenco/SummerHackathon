@@ -7,23 +7,18 @@
     <title>Summer Hackathon</title>
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/twoFactorQuiz.css">
+    <link rel="stylesheet" href="./style/interests.css">
 </head>
 
 <body>
-
     <!-- HEADER -->
     <div class="header">
         <div class="logo">Logo</div>
         <div class="headerContainer">
-            <div class="headerItem" id="interests">Interests</div>
+            <div class="headerItem" id="interests" onclick="">Interests</div>
             <div class="headerItem" id="search">Two factor quizz</div>
             <div class="headerItem" id="linkSearch">Search using link</div>
         </div>
-    </div>
-
-    <!-- INTERESTS -->
-    <div class="interestsPage">
-
     </div>
 
     <!-- TWO FACTOR QUIZZ -->
@@ -44,7 +39,54 @@
         </div>
     </div>
 
+    <!-- INTERESTS -->
+    <div id="interestsModal" class="modal">
+        <div class="modal-content">
+            <h2 class="interes-title">Choose your recommendations</h2>
+            <span class="close">&times;</span>
+            <div class="interest-container">
+                <div class="interest-pairing">
+                    <h3>Technologies</h3>
+                    <div class="interest-group">
+                        <button class="interest-item">TV</button>
+                        <button class="interest-item">Smartphone</button>
+                        <button class="interest-item">Desktop</button>
+                        <button class="interest-item">Laptop</button>
+                        <button class="interest-item">Idk</button>
+                    </div>
+                </div>
+                <div class="interest-pairing">
+                    <h3>Cars</h3>
+                    <div class="interest-group">
+                        <button class="interest-item">SUV</button>
+                        <button class="interest-item">Sedan</button>
+                        <button class="interest-item">Baklajan</button>
+                        <button class="interest-item">BMW</button>
+                        <button class="interest-item">Vroom vroom</button>
+                        <button class="interest-item">SUV</button>
+                        <button class="interest-item">Sedan</button>
+                        <button class="interest-item">Baklajan</button>
+                        <button class="interest-item">BMW</button>
+                        <button class="interest-item">Vroom vroom</button>
+                    </div>
+                </div>
+                <div class="interest-pairing">
+                    <h3>Home</h3>
+                    <div class="interest-group">
+                        <button class="interest-item">Lanterns</button>
+                        <button class="interest-item">Sofa</button>
+                        <button class="interest-item">Furniture</button>
+                        <button class="interest-item">Carpet</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./JavaScript/interests.js"></script>
     <script src="./JavaScript/main.js" defer></script>
+    <script src="./JavaScript/preferences.js" defer></script>
 </body>
 
 </html>
