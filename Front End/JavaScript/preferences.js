@@ -89,5 +89,5 @@ function addCard(title, url) {
     document.querySelector(".cardsContainer").append(ele);
 }
 
-addCard("omg", "");
-addCard("lol", "");
+addCard("omg", "https://www.google.com/");
+addCard("lol", "https://www.google.com/");
