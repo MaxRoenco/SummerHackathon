@@ -11,8 +11,9 @@ let choices = new Set();
 let preferenceButton = document.querySelector('.preferenceButton');
 
 preferenceButton.addEventListener("click", _ => {
+    document.querySelector(".cardsContainer").replaceChildren();
     let strArr = JSON.stringify(Array.from(choices));
-    getArticles(product + strArr);
+    getArticles(product + ": " + strArr);
 })
 
 factorButton.addEventListener('click', () => {
