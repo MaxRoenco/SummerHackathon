@@ -5,6 +5,7 @@ let inputTwoFactor = document.querySelector('#inputTwoFactor');
 let factorButton = document.querySelector('.factorButton');
 let preferenceWord;
 let choices = new Set();
+let preferenceButton = document.querySelector('.preferenceButton');
 
 factorButton.addEventListener('click', () => {
     preferenceWord = inputTwoFactor.value;
@@ -14,6 +15,7 @@ factorButton.addEventListener('click', () => {
 })
 
 function updateWords(array) {
+    prefsCont.style.visibility = 'visible';
     choices = new Set();
     preferences.replaceChildren();
     array = JSON.parse(array);
@@ -22,11 +24,17 @@ function updateWords(array) {
         div.classList.add('preference');
         div.textContent = value;
         div.addEventListener('click', () => {
+            console.log(choices.size);
             div.classList.toggle('active');
             if (choices.has(value)) {
                 choices.delete(value);
             } else {
                 choices.add(value);
+            }
+            if (choices.size === 0) {
+                preferenceButton.style.visibility = 'hidden';
+            } else {
+                preferenceButton.style.visibility = 'visible';
             }
             console.log([...choices]);
         })
