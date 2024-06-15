@@ -20,6 +20,7 @@ async function getComp(url) {
     if (response.ok) {
         console.log(data)
         out.textContent = data["result"];
+        obj = JSON.parse(data["result"]);
     } else {
         console.log(`Error: ${data.error}`)
     }
