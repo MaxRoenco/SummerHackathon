@@ -1,3 +1,5 @@
+let IP = "http://192.168.93.133:5000"
+
 let prefsCont = document.querySelector(".preferencesContainer");
 let preferences = document.getElementById('preferences');
 preferences.replaceChildren();
@@ -50,7 +52,7 @@ function updateWords(array) {
 
 async function sendRequest(input) {
     product = input;
-    const response = await fetch('http://192.168.43.133:5000/prefs', {
+    const response = await fetch(IP+'/prefs', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -66,7 +68,7 @@ async function sendRequest(input) {
 }
 
 async function getArticles(input) {
-    const response = await fetch('http://192.168.43.133:5000/recs', {
+    const response = await fetch(IP+'/recs', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -79,6 +81,13 @@ async function getArticles(input) {
     } else {
         console.log(`Error: ${data.error}`)
     }
+
+    for (const [key, value] of Object.entries(data['result'])) {
+        for(link of value) {
+            addCard(key, link);
+        }
+    }
+
 }
 
 function addCard(title, url) {
@@ -88,14 +97,3 @@ function addCard(title, url) {
     ele.href = url;
     document.querySelector(".cardsContainer").append(ele);
 }
-
-addCard("omg", "https://www.google.com/");
-addCard("lol", "https://www.google.com/");
-addCard("omg", "https://www.google.com/");
-addCard("lol", "https://www.google.com/");
-addCard("omg", "https://www.google.com/");
-addCard("lol", "https://www.google.com/");
-addCard("omg", "https://www.google.com/");
-addCard("lol", "https://www.google.com/");
-addCard("omg", "https://www.google.com/");
-addCard("lol", "https://www.google.com/");
