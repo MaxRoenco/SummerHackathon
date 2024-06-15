@@ -8,7 +8,8 @@ factorButton.addEventListener('click', () => {
     preferenceWord = inputTwoFactor.value;
     console.log(preferenceWord);
     inputTwoFactor.value = '';
-    sendRequest(preferenceWord);
+    // sendRequest(preferenceWord);
+    updateWords([]);
 })
 
 function updateWords(array) {
