@@ -3,22 +3,41 @@ preferences.replaceChildren();
 let inputTwoFactor = document.querySelector('#inputTwoFactor');
 let factorButton = document.querySelector('.factorButton');
 let preferenceWord;
+let choices = new Set();
 
 factorButton.addEventListener('click', () => {
     preferenceWord = inputTwoFactor.value;
     console.log(preferenceWord);
     inputTwoFactor.value = '';
     sendRequest(preferenceWord);
-    // updateWords([]);
+    updateWords(['Dark mode',
+        'Notifications enabled',
+        'Language: English',
+        'Auto-update apps',
+        'Privacy: High',
+        'Font size: Medium',
+        'Location services enabled',
+        'Backup enabled',
+        'Two-factor authentication',
+        'Auto-play videos disabled']);
 })
 
 function updateWords(array) {
     preferences.replaceChildren();
-    array = JSON.parse(array);
+    // array = JSON.parse(array);
     array.forEach(value => {
         let div = document.createElement('div');
         div.classList.add('preference');
         div.textContent = value;
+        div.addEventListener('click', () => {
+            div.classList.toggle('active');
+            if (choices.has(value)) {
+                choices.delete(value);
+            } else {
+                choices.add(value);
+            }
+            console.log([...choices]);
+        })
         preferences.appendChild(div);
     });
 }
