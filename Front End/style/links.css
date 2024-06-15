@@ -12,15 +12,23 @@
     font-weight: 600;
 }
 
+.section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
 .linkSearch{
     flex-shrink: 0;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     margin-top: 20vh;
-    width: 80%;
+    width: 100%;
     background: transparent;
     font-size:xx-large;
+    margin-left: 20px;
 
     label {
         color: rgb(255, 255, 255);
@@ -29,12 +37,12 @@
 
 
 .inputlink {
-    width: 80%;
+    width: 95%;
     height: 8vh;
     border: none;
     border-radius: 10px;
     background: rgba(217, 217, 217, 0.667);
-    margin: 20px 10px 10px 0;
+    margin: 20px 0 10px 20px;
     color: rgba(198, 216, 244, 0.26);
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
 }
@@ -60,7 +68,10 @@
 .linkButton {
     background: rgba(0, 84, 211, 0.77);
     color: white;
-    padding: 15px;
+    /* padding: 15px; */
+    margin-top: 10px;
+    height: 8vh;
+    width: 25vh;
     border: none;
     border-radius: 15px;
     font-weight: 600;
