@@ -82,10 +82,29 @@
 }
 
 .interest-item {
+    font-size: 16px;
     padding: 5px 10px;
     background-color: #e7e7e7;
     border-radius: 5px;
     cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+}
+
+.interest-item:hover {
+    color: #fff;
+    background-color: #566cf8;
+}
+
+.interest-item:active {
+    background-color: #3b4cba;
+}
+
+.interest-item.selected {
+    background-color: #3b4cba;
+    color: #fff;
 }
 
 .interest-pairing {
@@ -119,4 +138,26 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
+}
+
+/* process */
+
+
+
+.interes__process-btn {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    background-color: rgb(68, 68, 210);
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+}
+
+.interes__process-btn:hover {
+    background-color: darkblue;
 }

@@ -80,3 +80,14 @@ async function getArticles(input) {
         console.log(`Error: ${data.error}`)
     }
 }
+
+function addCard(title, url) {
+    let ele = document.createElement("a");
+    ele.classList.add("card");
+    ele.textContent = title;
+    ele.href = url;
+    document.querySelector(".cardsContainer").append(ele);
+}
+
+addCard("omg", "https://www.google.com/");
+addCard("lol", "https://www.google.com/");
