@@ -30,21 +30,17 @@
     <div class="twoFactorQuizz">
         <div class="searchTwoFactor">
             <label for="factorsearch">Enter the wanted product:</label>
-            <input type="text" name="factorsearch">
-            <button>Process</button>
+            <div>
+                <input type="text" name="factorsearch" id="inputTwoFactor" class="inputTwoFactor"
+                    placeholder="E.g: TV, car, processor">
+                <button class="factorButton">Process</button>
+            </div>
         </div>
         <div class="preferencesContainer">
             <p>Select Preferences:</p>
-            <div class="preference"></div>
-            <div class="preference"></div>
-            <div class="preference"></div>
-            <div class="preference"></div>
-            <div class="preference"></div>
-            <div class="preference"></div>
-            <div class="preference"></div>
-            <div class="preference"></div>
-            <div class="preference"></div>
-            <div class="preference"></div>
+            <div class="preferences" id="preferences">
+                <div class="preference">Cheap</div>
+            </div>
         </div>
     </div>
     
