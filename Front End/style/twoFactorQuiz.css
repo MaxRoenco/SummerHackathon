@@ -11,6 +11,7 @@
     color: #36137b;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
+    display: none;
 }
 
 .searchTwoFactor,
@@ -31,8 +32,6 @@
 
 
 }
-
-
 
 .inputTwoFactor {
     width: 80%;
@@ -92,7 +91,7 @@
 
 .preferences {
     display: grid;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     width: 100%;
     margin-top: 10px;
 }
