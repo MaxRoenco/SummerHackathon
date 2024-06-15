@@ -54,11 +54,11 @@ body {
 .headerContainer {
     width: 60%;
     /* align-items: right; */
-    /* text-align: center; */
+    text-align: center;
     margin-left: auto;
-    margin-right: 5%;
+    margin-right: 0;
     display: flex;
-    /* justify-content: space-evenly; */
+    justify-content: flex-end;
 }
 
 .headerContainer>a {
