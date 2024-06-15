@@ -24,20 +24,25 @@
 .searchTwoFactor {
     width: 80%;
     background: transparent;
+
+    label {
+        color: rgb(76, 76, 150);
+    }
 }
 
 .inputTwoFactor {
-    width: 70%;
+    width: 80%;
     height: 40px;
     border: none;
     border-radius: 10px;
-    background: rgba(217, 217, 217, 0.19);
+    background: rgba(217, 217, 217, 0.667);
     margin: 20px 10px 10px 0;
     color: rgba(198, 216, 244, 0.26);
 }
 
 .inputTwoFactor::placeholder {
-    color: #41189464;
+    padding-left: 5px;
+    color: #4118948e;
     font-weight: 500;
     font-size: 14px;
 }
