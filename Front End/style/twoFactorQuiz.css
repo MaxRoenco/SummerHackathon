@@ -1,5 +1,5 @@
 .twoFactorQuizz {
-    height: calc(100vh - 60px);
+    height: 100%;
     background-image: url('../assets/img/TwoFactorQuizzBack.png');
     background-size: cover;
     background-position: center;
@@ -119,12 +119,13 @@
 
 .preferenceButton {
     background: rgb(255, 255, 255);
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 10px;
     border-radius: 15px;
     cursor: pointer;
     box-shadow: 1px 2px 10px 1px;
     visibility: hidden;
+    margin-bottom: 40px;
 }
 
 .preferenceButton:active {
@@ -133,7 +134,6 @@
 
 .cardsContainer {
     width: 100%;
-    background: #36137b4e;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -150,9 +150,10 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #5d2dbd5a;
+    background-color: #5d2dbd9b;
     border: 1px solid #fff;
     box-sizing: border-box;
     border-radius: 15px;
     margin: auto;
+    margin-bottom: 20px;
 }
