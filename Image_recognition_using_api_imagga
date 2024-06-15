@@ -1,0 +1,63 @@
+import requests
+import json
+import base64
+
+# Replace with your Imagga API key and secret
+API_KEY = 'acc_3b12c518b79987a'
+API_SECRET = 'fe127f6e7fbb5946ccf1b1d0ef4ab68d'
+
+# Replace with the path to your image file
+IMAGE_PATH = '2.jpg'
+
+
+def analyze_image(image_path):
+    # Imagga endpoint URLs
+    upload_url = 'https://api.imagga.com/v2/uploads'
+    categorize_url = 'https://api.imagga.com/v2/categories/personal_photos'
+
+    # Create authentication header
+    auth_header = {
+        'Authorization': 'Basic ' + base64.b64encode(f'{API_KEY}:{API_SECRET}'.encode()).decode()
+    }
+
+    # Upload the image
+    try:
+        with open(image_path, 'rb') as image_file:
+            response = requests.post(
+                upload_url,
+                headers=auth_header,
+                files={'image': image_file}
+            )
+
+        # Check if upload was successful
+        response.raise_for_status()
+        upload_data = response.json()
+        upload_id = upload_data['result']['upload_id']
+    except requests.exceptions.RequestException as e:
+        print("Error uploading image:", e)
+        return
+    except json.JSONDecodeError:
+        print("Error: Response from image upload is not valid JSON.")
+        print("Response text:", response.text)
+        return
+
+    # Categorize the uploaded image
+    try:
+        response = requests.get(
+            categorize_url,
+            headers=auth_header,
+            params={'image_upload_id': upload_id}
+        )
+
+        response.raise_for_status()
+        results = response.json()
+        print(json.dumps(results, indent=4))
+    except requests.exceptions.RequestException as e:
+        print("Error categorizing image:", e)
+    except json.JSONDecodeError:
+        print("Error: Response from categorization is not valid JSON.")
+        print("Response text:", response.text)
+
+
+if __name__ == '__main__':
+    analyze_image(IMAGE_PATH)
