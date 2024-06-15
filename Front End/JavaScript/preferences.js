@@ -1,3 +1,4 @@
+let prefsCont = document.querySelector(".preferencesContainer");
 let preferences = document.getElementById('preferences');
 preferences.replaceChildren();
 let inputTwoFactor = document.querySelector('#inputTwoFactor');
@@ -9,7 +10,6 @@ factorButton.addEventListener('click', () => {
     console.log(preferenceWord);
     inputTwoFactor.value = '';
     sendRequest(preferenceWord);
-    // updateWords([]);
 })
 
 function updateWords(array) {
@@ -25,8 +25,7 @@ function updateWords(array) {
 
 async function sendRequest(input) {
     const responseElement = document.getElementById('response');
-
-    const response = await fetch('http://192.168.93.133:5000/prefs', {
+    const response = await fetch('http://192.168.43.133:5000/prefs', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
