@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -34,4 +34,80 @@
         }
     </script>
 </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to Base64 Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input[type="file"] {
+            margin: 20px;
+        }
+        textarea {
+            width: 80%;
+            height: 150px;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image to Base64 Converter</h1>
+    <input type="file" id="imageInput" accept="image/*">
+    <textarea id="base64Output" readonly></textarea>
+    <br>
+    <button id="sendButton">Send Image</button>
+
+    <script>
+        let base64String = "";
+
+        document.getElementById('imageInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    base64String = e.target.result.split(',')[1];
+                    document.getElementById('base64Output').textContent = base64String;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById('sendButton').addEventListener('click', function() {
+            if (base64String) {
+                fetch('http://192.168.93.133:5000/imgs', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ image: base64String })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log('Success:', data);
+                    alert('Image sent successfully');
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                    alert('Error sending image');
+                });
+            } else {
+                alert('Please upload an image first.');
+            }
+        });
+    </script>
+</body>
 </html>
+
+
