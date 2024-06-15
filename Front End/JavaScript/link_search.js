@@ -3,6 +3,7 @@ let input = document.querySelector("#inputlink");
 let btn = document.querySelector(".linkButton");
 
 btn.addEventListener("click", _ => {
+    console.log("sup");
     getComp(input.value);
 })
 
