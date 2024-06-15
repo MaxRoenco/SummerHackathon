@@ -29,4 +29,22 @@ arrPreferences.forEach((value, index) => {
     preferences.appendChild(div);
 });
 
+async function sendRequest(input) {
+    const responseElement = document.getElementById('response');
 
+    const response = await fetch('http://127.0.0.1:5000/process', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ input: numberInput })
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+        responseElement.textContent = `Number: ${data.result}`;
+    } else {
+        responseElement.textContent = `Error: ${data.error}`;
+    }
+}
