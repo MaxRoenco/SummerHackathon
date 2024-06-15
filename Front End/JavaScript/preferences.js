@@ -4,8 +4,14 @@ preferences.replaceChildren();
 let inputTwoFactor = document.querySelector('#inputTwoFactor');
 let factorButton = document.querySelector('.factorButton');
 let preferenceWord;
+let product = "";
 let choices = new Set();
 let preferenceButton = document.querySelector('.preferenceButton');
+
+preferenceButton.addEventListener("click", _ => {
+    let strArr = JSON.stringify(Array.from(choices));
+    getArticles(product + strArr);
+})
 
 factorButton.addEventListener('click', () => {
     preferenceWord = inputTwoFactor.value;
@@ -43,6 +49,7 @@ function updateWords(array) {
 }
 
 async function sendRequest(input) {
+    product = input;
     const response = await fetch('http://192.168.43.133:5000/prefs', {
         method: 'POST',
         headers: {
@@ -55,5 +62,21 @@ async function sendRequest(input) {
 
     if (response.ok) {
         updateWords(data.result);
+    }
+}
+
+async function getArticles(input) {
+    const response = await fetch('http://192.168.43.133:5000/recs', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ input: input })
+    });
+    const data = await response.json();
+    if (response.ok) {
+        console.log(data)
+    } else {
+        console.log(`Error: ${data.error}`)
     }
 }
