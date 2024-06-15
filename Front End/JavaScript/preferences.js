@@ -1,17 +1,5 @@
 let preferences = document.getElementById('preferences');
-let arrPreferences = [
-    'Dark mode',
-    'Notifications enabled',
-    'Language: English',
-    'Auto-update apps',
-    'Privacy: High',
-    'Font size: Medium',
-    'Location services enabled',
-    'Backup enabled',
-    'Two-factor authentication',
-    'Auto-play videos disabled'
-];
-
+preferences.replaceChildren();
 let inputTwoFactor = document.querySelector('#inputTwoFactor');
 let factorButton = document.querySelector('.factorButton');
 let preferenceWord;
@@ -20,14 +8,19 @@ factorButton.addEventListener('click', () => {
     preferenceWord = inputTwoFactor.value;
     console.log(preferenceWord);
     inputTwoFactor.value = '';
+    sendRequest(preferenceWord);
 })
 
-arrPreferences.forEach((value, index) => {
-    let div = document.createElement('div');
-    div.classList.add('preference');
-    div.textContent = value;
-    preferences.appendChild(div);
-});
+function updateWords(array) {
+    preferences.replaceChildren();
+    array = JSON.parse(array);
+    array.forEach(value => {
+        let div = document.createElement('div');
+        div.classList.add('preference');
+        div.textContent = value;
+        preferences.appendChild(div);
+    });
+}
 
 async function sendRequest(input) {
     const responseElement = document.getElementById('response');
@@ -37,14 +30,12 @@ async function sendRequest(input) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ input: numberInput })
+        body: JSON.stringify({ input: input })
     });
 
     const data = await response.json();
 
     if (response.ok) {
-        responseElement.textContent = `Number: ${data.result}`;
-    } else {
-        responseElement.textContent = `Error: ${data.error}`;
+        updateWords(data.result);
     }
 }
