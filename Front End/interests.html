@@ -8,62 +8,27 @@
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/twoFactorQuiz.css">
     <link rel="stylesheet" href="./style/interests.css">
+    
 </head>
 
 <body>
+<div class="container_background">
+
+
     <!-- HEADER -->
     <div class="header">
         <div class="logo">Logo</div>
         <div class="headerContainer">
-            <div class="headerItem" id="interests" onclick="">Interests</div>
+            <div class="headerItem" id="interests">Interests</div>
             <div class="headerItem" id="search">Two factor quizz</div>
             <div class="headerItem" id="linkSearch">Search using link</div>
         </div>
     </div>
 
-    <!-- TWO FACTOR QUIZZ -->
-    <div class="twoFactorQuizz">
-        <div class="searchTwoFactor">
-            <label for="factorsearch">Enter the wanted product:</label>
-            <div>
-                <input type="text" name="factorsearch" id="inputTwoFactor" class="inputTwoFactor"
-                    placeholder="E.g: TV, car, processor">
-                <button class="factorButton">Process</button>
-            </div>
-        </div>
-        <div class="preferencesContainer">
-            <p>Select Preferences:</p>
-            <div class="preferences" id="preferences">
-                <div class="preference">Cheap</div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="modal">
 
-    </div>
-
-
-    <div class="footer">
-        <hr>
-        <div class="section">
-            <div class="subsection">
-                <h1>Contact Us</h1>
-                <h3>Street: Traian Boulevard</h3>
-                <h3>City: Chisinau</h3>
-                <h3>Zip Code:21201</h3>
-                <h3>Phone number: 0(22)345678</h3>
-            </div>
-            <div class="subsection">
-                <h1>Menu</h1>
-                <h3><a href="#">Home</a></h3>
-                <h3><a href="#">Shopping bag</a></h3>
-                <h3><a href="#">About</a></h3>
-            </div>
-            <div class="subsection text-right">
-                <h1>Were are we located ?</h1>
-                <iframe width="250" height="150" id="gmap_canvas" src="https://maps.google.com/maps?q=chisinau,%20traian%2010&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-            </div>
+    <div class="interestsPage">
+        <div class="interest_container">
+            <button class="interest_button" id="openModalBtn">Find Your Interests</button>
         </div>
     </div>
 
@@ -110,11 +75,8 @@
             </div>
         </div>
     </div>
-
-
-    <script src="./JavaScript/interests.js"></script>
+</div>
     <script src="./JavaScript/main.js" defer></script>
-    <script src="./JavaScript/preferences.js" defer></script>
 </body>
 
 </html>

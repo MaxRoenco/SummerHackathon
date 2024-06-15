@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> b8b9160b374673dc7400a7ef51c8300fe2c7c024
 .modal {
     display: none;
     position: fixed;
@@ -10,7 +14,10 @@
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
     padding-top: 60px;
+<<<<<<< HEAD
     display: none;
+=======
+>>>>>>> b8b9160b374673dc7400a7ef51c8300fe2c7c024
 }
 
 /* Modal content */
@@ -24,7 +31,11 @@
 }
 
 /* Close button */
+<<<<<<< HEAD
 .close {
+=======
+.close { 
+>>>>>>> b8b9160b374673dc7400a7ef51c8300fe2c7c024
     color: #aaa;
     float: right;
     font-size: 28px;
@@ -45,7 +56,10 @@
     align-items: center;
     height: 75vh;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b8b9160b374673dc7400a7ef51c8300fe2c7c024
 .interest-container {
     justify-content: center;
     align-content: center;
@@ -58,7 +72,11 @@
     margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 .interes-title {
+=======
+.interes-title{
+>>>>>>> b8b9160b374673dc7400a7ef51c8300fe2c7c024
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
     color: #bdc6ff;
@@ -88,7 +106,10 @@
     border-radius: 5px;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> b8b9160b374673dc7400a7ef51c8300fe2c7c024
 .interest-pairing {
     display: flex;
     flex-direction: column;
@@ -96,7 +117,11 @@
 }
 
 /* button */
+<<<<<<< HEAD
 .interest_button {
+=======
+.interest_button{
+>>>>>>> b8b9160b374673dc7400a7ef51c8300fe2c7c024
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     background-color: rgb(49, 49, 145);
@@ -106,8 +131,12 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 24px;
+<<<<<<< HEAD
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     /* Add this line */
+=======
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Add this line */
+>>>>>>> b8b9160b374673dc7400a7ef51c8300fe2c7c024
 
 }
 
@@ -122,4 +151,8 @@
     background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> b8b9160b374673dc7400a7ef51c8300fe2c7c024
