@@ -7,6 +7,7 @@
     <title>Summer Hackathon</title>
     <link rel="stylesheet" href="./style/main.css">
     <link rel="stylesheet" href="./style/twoFactorQuiz.css">
+    <link rel="stylesheet" href="./style/uploda.css">
 </head>
 
 <!-- HEADER -->
@@ -37,8 +38,25 @@
             <input type="text" name="factorsearch" id="inputTwoFactor" class="inputTwoFactor"
                 placeholder="E.g: TV, car, processor">
             <button class="factorButton">Process</button>
+            <button class="factorButton" id="imgSrch">Image search</button>
         </div>
     </div>
+
+    <div class="file-uploader">
+        <div class="uploader-header">
+            <h2 class="uploader-title">File Uploader Made</h2>
+            <h4 class="file-completed-status"></h4>
+        </div>
+        <ul class="file-list"></ul>
+        <div class="file-upload-box">
+            <h2 class="box-title">
+                <span class="file-instruction">Drag files here or</span>
+                <span class="file-browse-button">browse</span>
+            </h2>
+            <input class="file-browse-input" type="file" multiple hidden>
+        </div>
+    </div>
+
     <div class="preferencesContainer">
         <p>Select Preferences:</p>
         <div class="preferences" id="preferences">
@@ -63,7 +81,6 @@
                 <h3><a href="./interests.html">Interests</a></h3>
                 <h3><a href="./twoFactorQuiz.html">Two factor quiz</a></h3>
                 <h3><a href="./link.html">Search using link</a></h3>
-                <h3><a href="./upload.html">Upload image</a></h3>
             </div>
             <div class="subsection text-right">
                 <h1>Were are we located ?</h1>
@@ -80,6 +97,7 @@
 <script src="./JavaScript/interests.js"></script>
 <script src="./JavaScript/main.js" defer></script>
 <script src="./JavaScript/preferences.js" defer></script>
+<script src="./JavaScript/upload.js"></script>
 </body>
 
 </html>
