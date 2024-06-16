@@ -1,10 +1,12 @@
 .linksection {
     height: 100%;
+    width: 100%;
     background-image: url('../assets/img/TwoFactorQuizzBack.png');
     background-size: cover;
     background-position: center;
     z-index: -1;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     color: #36137b;
@@ -21,18 +23,30 @@
 
 .linkSearch {
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
-    width: 90%;
+    width: 100%;
     background: transparent;
     font-size: x-large;
+
 
     label {
         color: rgb(255, 255, 255);
     }
 }
 
+.factorLinkContainer {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
 
 .inputlink {
     width: 80%;
@@ -62,7 +76,7 @@
     padding-left: 10px;
 }
 
-.linkSearch>label {
+.factorLinkContainer>label {
     margin-left: 20px;
 }
 
@@ -87,4 +101,43 @@
 
 .linkButton:hover {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.outputContainer {
+    width: 70%;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 30px;
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+    font-size: 16px;
+    margin: 40px 0;
+    display: none;
+}
+
+ul>p {
+    font-size: 26px;
+}
+
+.titleOutput {
+    text-align: center;
+    font-size: x-large;
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+}
+
+.description {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.conclusionOutput {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.conclusionOutput>p {
+    font-size: 26px;
 }
