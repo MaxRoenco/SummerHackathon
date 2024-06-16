@@ -6,7 +6,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
+    overflow: hidden;
     background-color: rgb(0, 0, 0);
     background-color: rgba(0, 0, 0, 0.4);
     padding-top: 60px;
@@ -14,7 +14,8 @@
 
 /* Modal content */
 .modal-content {
-    background-color: #0d0c41;
+    background: rgba(39, 1, 124, 1.0);
+    background: linear-gradient(135deg, rgba(39, 1, 124, 1.0), rgba(95, 4, 124, 1.0));
     margin: 5% auto;
     padding: 25px;
     width: 80%;
@@ -82,28 +83,31 @@
 }
 
 .interest-item {
+    min-width: 80px;
     font-size: 16px;
     padding: 5px 10px;
-    background-color: #e7e7e7;
+    background: transparent;
     border-radius: 5px;
     cursor: pointer;
-    border: none;
+    border: 1px solid rgb(99, 68, 192);
     outline: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    color: rgb(255, 255, 255);
+    transition: 0.3s ease, color 0.3s ease;
 
 }
 
 .interest-item:hover {
     color: #fff;
-    background-color: #566cf8;
+    background-color: rgb(99, 68, 192);
 }
 
 .interest-item:active {
-    background-color: #3b4cba;
+    transform: scale(0.95);
 }
 
 .interest-item.selected {
-    background-color: #3b4cba;
+    border: 1px solid white;
+    background-color: #bb00ff;
     color: #fff;
 }
 
@@ -148,19 +152,24 @@
 .interes__process-btn {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
-    background-color: rgb(68, 68, 210);
+    background-color: rgb(70, 0, 169);
     color: white;
     padding: 10px 30px;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 3px 3px 10px 1px rgba(0, 0, 0, 0.5);
     margin-top: 20px;
+    transition: 350ms ease;
 }
 
 .interes__process-btn:hover {
-    background-color: darkblue;
+    background-color: rgb(110, 23, 181);
+}
+
+.interes__process-btn:active {
+    transform: scale(0.95);
 }
 
 /* Posts */
