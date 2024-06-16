@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input Form</title>
     <script>
+        let IP = "http://192.168.43.133:5000";
         function printInputs() {
             // Get the values of the input fields
             var input1 = document.getElementById('input1').value;
             var input2 = document.getElementById('input2').value;
-            
-            // Print the values to the console
-            console.log('Input 1:', input1);
-            console.log('Input 2:', input2);
-            
+            let msg = [input1, input2]
+            send(JSON.stringify(msg));
             // Display the values on the webpage
-            document.getElementById('output').innerText = 'Input 1: ' + input1 + '\nInput 2: ' + input2;
+            document.getElementById('output');
+
+        }
+        async function send(input) {
+            const response = await fetch(IP+'/vs', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ input: input })
+            });
+            const data = await response.json();
+            if (response.ok) {
+                console.log(data)
+            } else {
+                console.log(`Error: ${data.error}`)
+            }
         }
     </script>
 </head>
