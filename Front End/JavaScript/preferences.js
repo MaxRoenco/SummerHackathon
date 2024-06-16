@@ -9,11 +9,24 @@ let preferenceWord;
 let product = "";
 let choices = new Set();
 let preferenceButton = document.querySelector('.preferenceButton');
+let imgBtn = document.querySelector("#imgSrch");
+let imgCnt = document.querySelector(".file-uploader");
+let displayed = false;
+imgCnt.style.display = "none";
 
 preferenceButton.addEventListener("click", _ => {
     document.querySelector(".cardsContainer").replaceChildren();
     let strArr = JSON.stringify(Array.from(choices));
     getArticles(product + ": " + strArr);
+})
+
+imgBtn.addEventListener("click", _ => {
+    displayed = !displayed;
+    if(displayed) {
+        imgCnt.style.display = "";
+    } else {
+        imgCnt.style.display = "none";
+    }
 })
 
 factorButton.addEventListener('click', () => {

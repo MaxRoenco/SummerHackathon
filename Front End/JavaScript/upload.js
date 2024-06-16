@@ -59,6 +59,8 @@ document.addEventListener('DOMContentLoaded', () => {
     };
   
     const sendToServer = (base64String) => {
+      let imgCnt = document.querySelector(".file-uploader");
+      imgCnt.style.display = "none";
       fetch('http://192.168.43.133:5000/imgs', {
         method: 'POST',
         headers: {
@@ -68,7 +70,9 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then(response => response.json())
       .then(data => {
-        console.log(data["result"]["tags"][0]["tag"]["en"], data["result"]["tags"][1]["tag"]["en"], data["result"]["tags"][2]["tag"]["en"]);
+        let ele = document.querySelector("#inputTwoFactor");
+        ele.value = data["result"]["tags"][0]["tag"]["en"];
+        ele.focus()
       })
       .catch(error => {
         console.error('Error:', error);
