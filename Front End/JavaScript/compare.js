@@ -19,7 +19,8 @@ async function send(input) {
     });
     const data = await response.json();
     if (response.ok) {
-        console.log(data.result);
+        document.querySelector("#output").textContent = data.result;
+        // console.log(data.result);
     } else {
         console.log(`Error: ${data.error}`)
     }

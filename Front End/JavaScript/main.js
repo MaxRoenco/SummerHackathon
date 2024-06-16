@@ -26,6 +26,25 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+try {
+    let firstLink = document.querySelector('#firstLink');
+    let secondLink = document.querySelector('#secondLink');
+
+    firstLink.addEventListener('focus', () => {
+        firstLink.placeholder = "";
+    })
+    firstLink.addEventListener('blur', () => {
+        firstLink.placeholder = "First Link";
+    })
+    secondLink.addEventListener('focus', () => {
+        secondLink.placeholder = "";
+    })
+    secondLink.addEventListener('blur', () => {
+        secondLink.placeholder = "Second Link";
+    })
+} catch (error) {
+    console.log(error);
+}
 
 let twoFactorQuiz = document.querySelector('.TwoFactorQuizz');
 let interests = document.querySelector('.modal');

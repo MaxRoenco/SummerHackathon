@@ -13,7 +13,7 @@ let imgBtn = document.querySelector("#imgSrch");
 let imgCnt = document.querySelector(".file-uploader");
 let displayed = false;
 imgCnt.style.display = "none";
-
+preferenceButton.style.visibility = 'hidden';
 preferenceButton.addEventListener("click", _ => {
     document.querySelector(".cardsContainer").replaceChildren();
     let strArr = JSON.stringify(Array.from(choices));
@@ -30,10 +30,11 @@ imgBtn.addEventListener("click", _ => {
 })
 
 factorButton.addEventListener('click', () => {
+    preferenceWord = inputTwoFactor.value;
+    if(preferenceWord.length < 1) return;
     factorButton.style.display = "none";
     imgCnt.style.display = "none";
     imgBtn.style.display = "none";
-    preferenceWord = inputTwoFactor.value;
     console.log(preferenceWord);
     sendRequest(preferenceWord);
 })
@@ -46,11 +47,7 @@ function updateWords(array) {
     array.forEach(value => {
         let div = document.createElement('div');
         div.classList.add('preference');
-        let span = document.createElement('span');
-        span.classList.add('tooltip');
-        span.textContent = "some text here";
         div.textContent = value;
-        div.append(span);
         div.addEventListener('click', () => {
             console.log(choices.size);
             div.classList.toggle('active');
