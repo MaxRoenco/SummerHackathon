@@ -101,6 +101,7 @@
 }
 
 .preference {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -118,10 +119,6 @@
 
 .preference:hover {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.preference:active {
-    transform: scale(0.95);
 }
 
 .active {
@@ -160,8 +157,8 @@
 .cardsContainer {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 40px; */
     justify-content: center;
     align-items: center;
 }
@@ -169,7 +166,7 @@
 .card {
     text-decoration: none;
     color: white;
-    width: 70%;
+    width: 80%;
     height: 100px;
     display: flex;
     justify-content: center;
