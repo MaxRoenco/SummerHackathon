@@ -13,7 +13,7 @@ let imgBtn = document.querySelector("#imgSrch");
 let imgCnt = document.querySelector(".file-uploader");
 let displayed = false;
 imgCnt.style.display = "none";
-
+preferenceButton.style.display = "none";
 preferenceButton.addEventListener("click", _ => {
     document.querySelector(".cardsContainer").replaceChildren();
     let strArr = JSON.stringify(Array.from(choices));
