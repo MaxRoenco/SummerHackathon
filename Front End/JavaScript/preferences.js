@@ -30,10 +30,11 @@ imgBtn.addEventListener("click", _ => {
 })
 
 factorButton.addEventListener('click', () => {
+    preferenceWord = inputTwoFactor.value;
+    if(preferenceWord.length < 1) return;
     factorButton.style.display = "none";
     imgCnt.style.display = "none";
     imgBtn.style.display = "none";
-    preferenceWord = inputTwoFactor.value;
     console.log(preferenceWord);
     sendRequest(preferenceWord);
 })
