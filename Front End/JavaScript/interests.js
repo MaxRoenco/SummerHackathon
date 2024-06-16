@@ -3,7 +3,7 @@ const modal = document.getElementById("interestsModal");
 const btn = document.getElementById("openModalBtn");
 const span = document.getElementsByClassName("close")[0];
 const procBtn = document.querySelector("#processButton");
-const loading = document.querySelector("#bgblur");
+const loading = document.querySelector("#loading-wrapper");
 loading.style.display = "none";
 
 let selectedInterests = [];
