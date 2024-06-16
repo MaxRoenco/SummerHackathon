@@ -86,12 +86,12 @@
 
         document.getElementById('sendButton').addEventListener('click', function() {
             if (base64String) {
-                fetch('http://192.168.93.133:5000/imgs', {
+                fetch('http://192.168.43.133:5000/imgs', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ image: base64String })
+                    body: JSON.stringify({ input: base64String })
                 })
                 .then(response => response.json())
                 .then(data => {
