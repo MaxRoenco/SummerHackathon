@@ -1,3 +1,4 @@
+let IP = "http://192.168.43.133:5000"
 let input1 = document.querySelector("#firstLink");
 let input2 = document.querySelector("#secondLink");
 let btn = document.querySelector(".compareButton");
