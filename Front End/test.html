@@ -12,9 +12,6 @@
             var input2 = document.getElementById('input2').value;
             let msg = [input1, input2]
             send(JSON.stringify(msg));
-            // Display the values on the webpage
-            document.getElementById('output');
-
         }
         async function send(input) {
             const response = await fetch(IP+'/vs', {
@@ -26,7 +23,7 @@
             });
             const data = await response.json();
             if (response.ok) {
-                console.log(data)
+                document.getElementById('output').textContent = data.result;
             } else {
                 console.log(`Error: ${data.error}`)
             }
