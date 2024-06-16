@@ -1,113 +1,44 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flask and JS Example</title>
-</head>
-<body>
-    <h1>Send a Number to Flask</h1>
-    <input type="text" id="numberInput" placeholder="Enter a number">
-    <button onclick="sendNumber()">Send</button>
-    <p id="response"></p>
-
-    <script>
-        async function sendNumber() {
-            const numberInput = document.getElementById('numberInput').value;
-            const responseElement = document.getElementById('response');
-            const response = await fetch('http://192.168.43.133:5000/comp', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ input: numberInput })
-            });
-
-            const data = await response.json();
-
-            if (response.ok) {
-                responseElement.textContent = data["result"]
-                console.log(data);
-            } else {
-                responseElement.textContent = `Error: ${data.error}`
-            }
-        }
-    </script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image to Base64 Converter</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
+    <title>Input Form</title>
+    <script>
+        let IP = "http://192.168.43.133:5000";
+        function printInputs() {
+            // Get the values of the input fields
+            var input1 = document.getElementById('input1').value;
+            var input2 = document.getElementById('input2').value;
+            let msg = [input1, input2]
+            send(JSON.stringify(msg));
         }
-        input[type="file"] {
-            margin: 20px;
+        async function send(input) {
+            const response = await fetch(IP+'/vs', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ input: input })
+            });
+            const data = await response.json();
+            if (response.ok) {
+                document.getElementById('output').textContent = data.result;
+            } else {
+                console.log(`Error: ${data.error}`)
+            }
         }
-        textarea {
-            width: 80%;
-            height: 150px;
-            margin-top: 20px;
-        }
-        button {
-            margin-top: 20px;
-            padding: 10px 20px;
-        }
-    </style>
+    </script>
 </head>
 <body>
-    <h1>Image to Base64 Converter</h1>
-    <input type="file" id="imageInput" accept="image/*">
-    <textarea id="base64Output" readonly></textarea>
-    <br>
-    <button id="sendButton">Send Image</button>
-
-    <script>
-        let base64String = "";
-
-        document.getElementById('imageInput').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    base64String = e.target.result.split(',')[1];
-                    document.getElementById('base64Output').textContent = base64String;
-                };
-                reader.readAsDataURL(file);
-            }
-        });
-
-        document.getElementById('sendButton').addEventListener('click', function() {
-            if (base64String) {
-                fetch('http://192.168.43.133:5000/imgs', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ input: base64String })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    console.log('Success:', data);
-                    alert('Image sent successfully');
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
-                    alert('Error sending image');
-                });
-            } else {
-                alert('Please upload an image first.');
-            }
-        });
-    </script>
+    <h1>Input Form</h1>
+    <form onsubmit="event.preventDefault(); printInputs();">
+        <label for="input1">Input 1:</label>
+        <input type="text" id="input1" name="input1"><br><br>
+        <label for="input2">Input 2:</label>
+        <input type="text" id="input2" name="input2"><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    <pre id="output"></pre>
 </body>
 </html>
-
-
