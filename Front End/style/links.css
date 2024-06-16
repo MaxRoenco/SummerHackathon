@@ -1,6 +1,7 @@
 ul {
     list-style: none;
 }
+
 .linksection {
     height: 100%;
     width: 100%;
@@ -85,17 +86,18 @@ ul {
 
 
 .linkButton {
-    background: rgba(0, 84, 211, 0.77);
-    color: white;
-    /* padding: 15px; */
+    width: 150px;
+    height: 50px;
     margin-top: 10px;
-    height: 8vh;
-    width: 25vh;
-    border: none;
-    border-radius: 15px;
-    font-weight: 600;
+    border: 1px solid rgba(59, 19, 240, 0.642);
+    border-radius: 20px;
+    background: rgb(62, 62, 203);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 1px 1px 20px 1px rgba(5, 7, 131, 0.644);
     cursor: pointer;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1), 4px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 100ms ease-in;
 }
 
 .linkButton:active {
@@ -103,7 +105,7 @@ ul {
 }
 
 .linkButton:hover {
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.1);
+    filter: brightness(1.2);
 }
 
 .outputContainer {
