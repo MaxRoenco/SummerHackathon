@@ -98,6 +98,7 @@
 }
 
 .preference {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,6 +116,29 @@
 .preference:hover {
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
+
+.tooltip {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .preference:hover .tooltip {
+    visibility: visible;
+  }
+
+
 
 .active {
     background: rgba(32, 196, 35, 0.832);
