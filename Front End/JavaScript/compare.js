@@ -19,8 +19,8 @@ async function send(input) {
     });
     const data = await response.json();
     if (response.ok) {
-        document.querySelector("#output").textContent = data.result;
-        // console.log(data.result);
+        document.querySelector("#output").innerHTML = data.result.replace(/\n/g, '<br>').replace(/\*/g, '');
+
     } else {
         console.log(`Error: ${data.error}`)
     }
