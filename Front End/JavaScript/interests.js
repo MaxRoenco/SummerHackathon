@@ -42,9 +42,8 @@ async function getArticles(input) {
     const data = await response.json();
     if (response.ok) {
         console.log(data.result);
-        let arr = JSON.parse(data.result);
-        for(let prompt of arr) {
-            
+        for(let obj of data.result) {
+            addPost(obj.title, "Click here to move to the site.", obj.url, `https://picsum.photos/seed/${getRandomInt(100000)}/200/300`);
         }
     }
 }
@@ -65,13 +64,14 @@ interestItems.forEach(item => {
     }
 });
 
-function addPost(title, text, url) {
-    let postCard = document.createElement("div");
+function addPost(title, text, url, imgUrl) {
+    let postCard = document.createElement("a");
+    postCard.href = url;
     postCard.classList.add("post-card");
     let postImage = document.createElement("div");
     postImage.classList.add("post-image");
     let img = document.createElement("img")
-    img.src = url;
+    img.src = imgUrl;
     img.alt = "Post image";
     let postContent = document.createElement("div");
     postContent.classList.add("post-content");
@@ -89,8 +89,6 @@ function addPost(title, text, url) {
     document.querySelector(".post-container").append(postCard);
 }
 
-addPost("This is a title", "Here is some text that might or might not be interesting depending on how you see this kind of stuff", "https://via.placeholder.com/150")
-addPost("This is a title", "Here is some text that might or might not be interesting depending on how you see this kind of stuff", "https://via.placeholder.com/150")
-addPost("This is a title", "Here is some text that might or might not be interesting depending on how you see this kind of stuff", "https://via.placeholder.com/150")
-addPost("This is a title", "Here is some text that might or might not be interesting depending on how you see this kind of stuff", "https://via.placeholder.com/150")
-addPost("This is a title", "Here is some text that might or might not be interesting depending on how you see this kind of stuff", "https://via.placeholder.com/150")
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
