@@ -72,6 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(data => {
         let ele = document.querySelector("#inputTwoFactor");
         ele.value = data["result"]["tags"][0]["tag"]["en"];
+        let factorButton = document.querySelector('.factorButton');
+        factorButton.click();
         ele.focus()
       })
       .catch(error => {
