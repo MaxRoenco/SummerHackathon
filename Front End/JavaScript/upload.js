@@ -68,7 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .then(response => response.json())
       .then(data => {
-        console.log(data["input"]["tags"][0]["tag"]["en"]);
+        console.log(data["result"]["tags"][0]["tag"]["en"], data["result"]["tags"][1]["tag"]["en"], data["result"]["tags"][2]["tag"]["en"]);
       })
       .catch(error => {
         console.error('Error:', error);
