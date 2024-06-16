@@ -12,6 +12,21 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const inputField = document.getElementById("inputlink");
+
+    inputField.addEventListener("focus", function () {
+        this.placeholder = "";
+    });
+
+    inputField.addEventListener("blur", function () {
+        if (this.value === "") {
+            this.placeholder = "Link...";
+        }
+    });
+});
+
+
 let twoFactorQuiz = document.querySelector('.TwoFactorQuizz');
 let interests = document.querySelector('.modal');
 let searchLink;
