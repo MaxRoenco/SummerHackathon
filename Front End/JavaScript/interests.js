@@ -41,6 +41,7 @@ async function getArticles(input) {
     });
     const data = await response.json();
     if (response.ok) {
+        console.log(data.result);
         let arr = JSON.parse(data.result);
         for(let prompt of arr) {
             
