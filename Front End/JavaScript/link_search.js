@@ -9,6 +9,7 @@ let description = document.querySelector('.description');
 let outputContainer = document.querySelector('.outputContainer');
 let prosP = document.querySelector('#prosP');
 let consP = document.querySelector('#consP');
+let ConclusionP = document.querySelector('#ConclusionP');
 
 btn.addEventListener("click", _ => {
     console.log("sup");
@@ -27,12 +28,14 @@ async function getComp(url) {
     if (response.ok) {
         pros.replaceChildren();
         cons.replaceChildren();
+        conclusionOutput.replaceChildren();
         pros.append(prosP);
         cons.append(consP);
+        conclusionOutput.append(ConclusionP);
         console.log(data)
         obj = JSON.parse(data["result"]);
         titleOutput.textContent = obj.title;
-        conclusionOutput.textContent = obj.conclusion;
+        conclusionOutput.textContent += obj.conclusion;
         description.textContent = obj.description;
         obj['cons'].forEach(element => {
             let li = document.createElement('li');

@@ -104,16 +104,20 @@
 }
 
 .outputContainer {
-    width: 70%;
+    height: 100%;
+    width: 80%;
+    flex-wrap: wrap;
     display: grid;
     grid-template-columns: auto auto;
     padding: 30px;
-    border: 2px solid white;
+    border: 1px solid rgb(48, 0, 145);
+    background: linear-gradient(45deg, rgba(67, 0, 186, 0.6), rgba(207, 0, 234, 0.6));
     border-radius: 15px;
     color: white;
     font-size: 16px;
     margin: 40px 0;
     display: none;
+    box-shadow: 1px 1px 20px 1px black;
 }
 
 ul>p {
@@ -125,19 +129,38 @@ ul>p {
     font-size: x-large;
     grid-column-start: 1;
     grid-column-end: 3;
-
+    margin-bottom: 20px;
 }
 
 .description {
+    text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
+    margin-bottom: 20px;
+
+}
+
+#prosP,
+#consP {
+    margin-bottom: 10px;
+}
+
+.pros,
+.cons {
+    margin: 20px 0;
+    width: 90%;
+    text-align: center;
+    justify-content: center;
+    line-height: 22px;
 }
 
 .conclusionOutput {
     grid-column-start: 1;
     grid-column-end: 3;
+    margin-top: 20px;
 }
 
 .conclusionOutput>p {
     font-size: 26px;
+
 }
