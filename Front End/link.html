@@ -32,19 +32,31 @@
 <!-- TWO FACTOR QUIZZ -->
 <div class="linksection">
     <div class="linkSearch">
-
         <div class="animContainer">
             Product Searching is
             <span class="typed-text"></span>
             <span class="cursor">&nbsp;</span>
         </div>
-
-        <label for="factorlink">Enter the link:</label>
-        <div class="section">
-            <input type="text" name="factorlink" id="inputlink" class="inputlink" placeholder="Link...">
-            <button class="linkButton">Process</button>
+        <div class="factorLinkContainer">
+            <label for="factorlink">Enter the link:</label>
+            <div class="section">
+                <input type="text" name="factorlink" id="inputlink" class="inputlink" placeholder="Link...">
+                <button class="linkButton">Process</button>
+            </div>
         </div>
-        <h4 id="output"></h4>
+    </div>
+    <div class="outputContainer">
+        <div class="titleOutput"></div>
+        <div class="description"></div>
+        <ul class="pros">
+            <p id="prosP">Pros✅</p>
+        </ul>
+        <ul class="cons">
+            <p id="consP">Cons❌</p>
+        </ul>
+        <div class="conclusionOutput">
+            <p>Conclusion:</p>
+        </div>
     </div>
     <div class="footer">
         <hr>
