@@ -23,7 +23,7 @@
 }
 
 .compareContainer>input {
-    width: 80%;
+    width: 50%;
     height: 8vh;
     border: none;
     border-radius: 10px;
@@ -71,4 +71,20 @@
 
 .compareButton:active {
     transform: scale(0.95);
+}
+
+#output {
+    display: none;
+    height: 100%;
+    width: 80%;
+    flex-wrap: wrap;
+    grid-template-columns: auto auto;
+    padding: 30px;
+    border: 1px solid rgb(48, 0, 145);
+    background: linear-gradient(45deg, rgba(67, 0, 186, 0.6), rgba(207, 0, 234, 0.6));
+    border-radius: 15px;
+    color: white;
+    font-size: 16px;
+    margin: 40px 0;
+    box-shadow: 1px 1px 20px 1px black;
 }
