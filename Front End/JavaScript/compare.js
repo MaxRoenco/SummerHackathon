@@ -18,7 +18,7 @@ async function send(input) {
     });
     const data = await response.json();
     if (response.ok) {
-        document.getElementById('output').textContent = data.result;
+        console.log(data.result);
     } else {
         console.log(`Error: ${data.error}`)
     }
