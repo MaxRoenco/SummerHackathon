@@ -62,6 +62,9 @@
     padding-left: 10px;
 }
 
+.linkSearch>label {
+    margin-left: 20px;
+}
 
 
 .linkButton {
