@@ -241,10 +241,12 @@ p {
     text-align: center;
     width: 17em;
     white-space: nowrap;
-    animation: type 2s steps(300, end); 
+    animation: type 3s steps(100, end);
 }
 
 
-@keyframes type{ 
-from { width: 0px; } 
-} 
+@keyframes type {
+    from {
+        width: 0px;
+    }
+}
