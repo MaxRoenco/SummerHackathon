@@ -7,13 +7,30 @@
   font-family: "Inter", sans-serif;
 }
 
-body {
+html, body {
+  height: 100%;
+}
+
+.upload_container {
   display: flex;
-  align-items: center;
-  padding: 15px;
-  justify-content: center;
+  flex-direction: column;
   min-height: 100vh;
-  background: #5145BA;
+  background-image: url('../assets/img/TwoFactorQuizzBack.png');
+}
+
+.header, .footer {
+  background: #fff;
+  width: 100%;
+  padding: 20px;
+}
+
+.header .headerContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.header .headerItem {
+  margin: 0 10px;
 }
 
 .file-uploader {
@@ -21,6 +38,7 @@ body {
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  margin: auto; /* Center the file uploader */
 }
 
 .file-uploader .uploader-header {
@@ -173,4 +191,8 @@ body {
 
 .file-upload-box .box-title .file-browse-button:hover {
  text-decoration: underline;
+}
+
+.footer {
+  margin-top: auto; 
 }
