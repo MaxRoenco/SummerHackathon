@@ -12,6 +12,8 @@ let preferenceButton = document.querySelector('.preferenceButton');
 let imgBtn = document.querySelector("#imgSrch");
 let imgCnt = document.querySelector(".file-uploader");
 let displayed = false;
+const loading = document.querySelector("#loading-wrapper");
+loading.style.display = "none";
 imgCnt.style.display = "none";
 preferenceButton.style.visibility = 'hidden';
 preferenceButton.addEventListener("click", _ => {
@@ -68,6 +70,7 @@ function updateWords(array) {
 }
 
 async function sendRequest(input) {
+    loading.style.display = "";
     product = input;
     const response = await fetch(IP+'/prefs', {
         method: 'POST',
@@ -82,9 +85,11 @@ async function sendRequest(input) {
     if (response.ok) {
         updateWords(data.result);
     }
+    loading.style.display = "none";
 }
 
 async function getArticles(input) {
+    loading.style.display = "";
     const response = await fetch(IP+'/recs', {
         method: 'POST',
         headers: {
@@ -104,7 +109,7 @@ async function getArticles(input) {
             addCard(key, link);
         }
     }
-
+    loading.style.display = "none";
 }
 
 function addCard(title, url) {

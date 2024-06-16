@@ -10,6 +10,8 @@ let outputContainer = document.querySelector('.outputContainer');
 let prosP = document.querySelector('#prosP');
 let consP = document.querySelector('#consP');
 let ConclusionP = document.querySelector('#ConclusionP');
+let loading = document.querySelector('#loading-wrapper');
+loading.style.display = "none"
 
 btn.addEventListener("click", _ => {
     console.log("sup");
@@ -17,6 +19,7 @@ btn.addEventListener("click", _ => {
 })
 
 async function getComp(url) {
+    loading.style.display = ""
     const response = await fetch(IP + '/comp', {
         method: 'POST',
         headers: {
@@ -51,4 +54,5 @@ async function getComp(url) {
     } else {
         console.log(`Error: ${data.error}`)
     }
+    loading.style.display = "none"
 }

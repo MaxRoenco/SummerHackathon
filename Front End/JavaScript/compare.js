@@ -6,6 +6,8 @@ let firstLink = document.querySelector('#firstLink');
 let secondLink = document.querySelector('#secondLink');
 let compareP = document.querySelector('#compareP');
 let output = document.querySelector('#output');
+let loading = document.querySelector('#loading-wrapper');
+loading.style.display = "none"
 
 try {
     firstLink.addEventListener('focus', () => {
@@ -31,6 +33,7 @@ btn.addEventListener("click", _ => {
 
 
 async function send(input) {
+    loading.style.display = ""
     const response = await fetch(IP + '/vs', {
         method: 'POST',
         headers: {
@@ -50,4 +53,5 @@ async function send(input) {
     } else {
         console.log(`Error: ${data.error}`)
     }
+    loading.style.display = "none"
 }
