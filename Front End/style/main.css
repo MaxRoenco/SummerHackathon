@@ -82,7 +82,7 @@ body {
 
 .headerItem:hover {
     /* background-color: rgb(255, 255, 255); */
-    color: rgb(72, 72, 126);
+    color: rgba(5, 0, 137, 0.748);
     /* box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), 4px 4px 10px rgba(0, 0, 0, 0.2); */
 }
 
