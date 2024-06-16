@@ -4,13 +4,6 @@ body {
     background-size: cover;
     /*background-position: center; */
   }
-  
-#bgblur {
-  width: 1000px;
-  height: 1000px;
-  background-color: red;
-  z-index: 10;
-}
 
 .blur {
     filter: blur(2px);
