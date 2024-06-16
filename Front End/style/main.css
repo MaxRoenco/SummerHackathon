@@ -143,3 +143,24 @@ body {
 .subsection a:hover {
     color: rgb(0, 0, 0);
 }
+
+.animContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-weight: 700;
+    height: 200px;
+}
+
+.typed-text {
+    margin-left: 5px;
+    color: rgb(16, 16, 175);
+}
+
+.cursor {
+    background: rgba(255, 255, 255, 0.655);
+    width: 6px;
+}
