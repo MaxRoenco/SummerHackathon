@@ -46,7 +46,11 @@ function updateWords(array) {
     array.forEach(value => {
         let div = document.createElement('div');
         div.classList.add('preference');
+        let span = document.createElement('span');
+        span.classList.add('tooltip');
+        span.textContent = "some text here";
         div.textContent = value;
+        div.append(span);
         div.addEventListener('click', () => {
             console.log(choices.size);
             div.classList.toggle('active');
