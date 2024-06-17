@@ -1,4 +1,4 @@
-let IP = "http://192.168.43.133:5000"
+let IP = "http://127.0.0.1:5000"
 let input = document.querySelector("#inputlink");
 let btn = document.querySelector(".linkButton");
 let pros = document.querySelector('.pros');
